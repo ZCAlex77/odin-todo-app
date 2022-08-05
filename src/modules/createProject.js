@@ -1,15 +1,14 @@
-const createProject = (title) => {
-  const todos = [];
+import { v4 as uuidv4 } from 'uuid';
+
+const createProject = (title, todos = []) => {
+  const id = uuidv4();
 
   const addTodo = (todo) => todos.push(todo);
-
   const removeTodo = (id) => {
     todos = todos.filter((todo) => todo.id !== id);
   };
 
-  const getTodos = () => todos;
-
-  return {title, addTodo, removeTodo, getTodos};
+  return { id, title, todos, addTodo, removeTodo };
 };
 
 export default createProject;

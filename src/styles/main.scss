@@ -160,12 +160,13 @@ main {
   background: #5cd85c;
   color: #222;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0 10px 0 10px;
   position: absolute;
   top: 0;
   right: 0;
   font-weight: bold;
   display: none;
+  z-index: 11;
 
   &:hover {
     color: #fff;
@@ -173,9 +174,9 @@ main {
 }
 
 #newTodo {
-  background: #555;
+  background-color: #777;
   position: absolute;
-  top: 3rem;
+  top: 0;
   right: 0;
   width: 300px;
   height: auto;
@@ -184,6 +185,7 @@ main {
   padding: 1rem;
   border-radius: 10px;
   display: none;
+  z-index: 10;
 
   label {
     text-align: center;
