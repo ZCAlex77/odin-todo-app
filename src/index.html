@@ -15,14 +15,15 @@
   <nav>
     <h2>Projects</h2>
     <hr>
-    <ul id="projects"></ul>
     <form id="newProject">
-      <input type="text" minlength="1" placeholder="Create new project..." required>
+      <input type="text" name="title" minlength="1" placeholder="Create new project..." required>
       <button type="submit">+</button>
     </form>
+    <hr>
+    <ul id="projects"></ul>
   </nav>
   <main>
-    <h1 id="projectTitle">Todo</h1>
+    <h1>Todo <span id="projectTitle"></span></h1>
     <hr>
     <div id="todos">
       <div class="todo">

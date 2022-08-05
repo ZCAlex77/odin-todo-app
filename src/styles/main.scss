@@ -11,6 +11,20 @@ html{
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar{
+  appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #777;
+}
+
 body{
   background: #333;
   display: grid;
@@ -39,9 +53,29 @@ nav{
   padding: 16px;
   grid-area: 3 / 2 / 3 / 2;
   border-radius: 10px;
+  overflow-y: scroll;
 
-  h2, hr, ul{
+  h2, hr, form{
     margin-bottom: 10px;
+  }
+
+  ul{
+    list-style: none;
+
+    li{
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border: 1px solid #fff;
+      padding: 5px 15px;
+      border-radius: 999px;
+      white-space: nowrap;
+
+      &:hover, &.active{
+        background: #fff;
+        color: #666;
+      }
+    }
   }
 
   form{
