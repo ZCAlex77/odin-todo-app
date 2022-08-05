@@ -1,1 +1,1 @@
-console.log('All good!');
+import './styles/main.scss';
