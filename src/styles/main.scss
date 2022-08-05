@@ -1,53 +1,53 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   color: inherit;
   font-family: 'Roboto', sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   appearance: none;
   width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #222;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #777;
 }
 
-body{
+body {
   background: #333;
   display: grid;
   grid-template: 4rem 32px 1fr 32px / 32px 25% 32px 1fr 32px;
   height: 100vh;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-header{
+header {
   background-color: #222;
   color: #fff;
   padding: 16px 32px;
   grid-area: 1 / 1 / 1 / 6;
 
-  h1{
+  h1 {
     font-size: 2rem;
   }
 }
 
-nav{
+nav {
   background-color: #666;
   color: #fff;
   padding: 16px;
@@ -55,14 +55,16 @@ nav{
   border-radius: 10px;
   overflow-y: scroll;
 
-  h2, hr, form{
+  h2,
+  hr,
+  form {
     margin-bottom: 10px;
   }
 
-  ul{
+  ul {
     list-style: none;
 
-    li{
+    li {
       font-size: 1.2rem;
       cursor: pointer;
       margin-bottom: 10px;
@@ -71,28 +73,29 @@ nav{
       border-radius: 999px;
       white-space: nowrap;
 
-      &:hover, &.active{
+      &:hover,
+      &.active {
         background: #fff;
         color: #666;
       }
     }
   }
 
-  form{
+  form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
   }
 
-  input{
+  input {
     color: #222;
     padding: 5px;
     flex: 80%;
     font-size: 1.1rem;
   }
 
-  button{
+  button {
     width: 32px;
     height: 32px;
     background: #5cd85c;
@@ -104,22 +107,23 @@ nav{
   }
 }
 
-main{
+main {
   grid-area: 3 / 4 / 3 / 4;
   color: #fff;
+  position: relative;
 
-  hr{
+  hr {
     margin-bottom: 1rem;
   }
 
-  #todos{
+  #todos {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
   }
 
-  .todo{
+  .todo {
     background: #555;
     width: 100%;
     height: 40px;
@@ -129,11 +133,11 @@ main{
     align-items: center;
     gap: 10px;
 
-    .title{
-      flex: 100%;
+    .title {
+      flex: 70%;
     }
 
-    button{
+    button {
       border-radius: 50%;
       aspect-ratio: 1 / 1;
       height: 100%;
@@ -142,11 +146,70 @@ main{
       color: #fff;
     }
 
-    .check:hover{
+    .check:hover {
       background: #5cd85c;
     }
-    .delete:hover{
+    .delete:hover {
       background: #f00;
     }
+  }
+}
+
+#addTodo {
+  padding: 0.5rem;
+  background: #5cd85c;
+  color: #222;
+  border: 0;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  display: none;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+#newTodo {
+  background: #555;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  display: none;
+
+  label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  input {
+    text-align: center;
+    padding: 5px;
+  }
+
+  textarea {
+    padding: 10px;
+  }
+
+  button {
+    border-radius: 10px;
+    border: 0;
+    background: #5cd85c;
+    padding: 5px;
   }
 }
