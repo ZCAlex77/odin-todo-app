@@ -1,6 +1,5 @@
 import './styles/main.scss';
-import createProject from './modules/createProject';
-import createTodo from './modules/createTodo';
+import { v4 as uuidv4 } from 'uuid';
 import UIController from './modules/UIController';
 import EventController from './modules/EventController';
 import Storage from './modules/Storage';
@@ -12,7 +11,7 @@ const app = (() => {
 
   projectForm.onsubmit = function (ev) {
     ev.preventDefault();
-    const newProject = createProject(this.title.value);
+    const newProject = {id: uuidv4(), title: this.title.value, todos: []};
     if (
       !Storage.getProjects().filter(
         (project) => project.title === newProject.title
@@ -29,12 +28,14 @@ const app = (() => {
 
   todoForm.onsubmit = function (ev) {
     ev.preventDefault();
-    const newTodo = createTodo(
-      this.title.value,
-      this.dueDate.value,
-      this.notes.value,
-      Storage.getProject().id
-    );
+    const newTodo = {
+      id: uuidv4(),
+      title: this.title.value,
+      dueDate: this.dueDate.value,
+      notes: this.notes.value,
+      parentProject: Storage.getCurrentProject(),
+      status: false,
+    };
     addTodo(newTodo);
     this.reset();
     this.style.display = 'none';
@@ -43,6 +44,8 @@ const app = (() => {
   addTodoBtn.onclick = () => {
     todoForm.style.display =
       todoForm.style.display === 'flex' ? 'none' : 'flex';
+
+    if(todoForm.style.display === 'flex') todoForm.title.focus();
   };
 
   const addProject = (newProject) => {
@@ -52,19 +55,19 @@ const app = (() => {
   };
 
   const addTodo = (newTodo) => {
+    Storage.getProjects((project) => project);
     Storage.addTodo(newTodo);
     UIController.renderTodos(Storage.getProject().todos);
-    //EventController.addTodoEvent(todo.id);
+    EventController.addTodoEvent(newTodo);
   };
 
   const setup = (() => {
+    const allTodos = Storage.getAllTodos();
     UIController.renderProjectList(Storage.getProjects());
-    UIController.renderTodos(Storage.getAllTodos());
+    UIController.renderTodos(allTodos);
     Storage.getProjects().forEach((project) =>
       EventController.addLinkEvent(project)
     );
-    // Storage.getAllTodos().forEach((todo) =>
-    //   EventController.addTodoEvent(todo.id)
-    // );
+    allTodos.forEach((todo) => EventController.addTodoEvent(todo));
   })();
 })();

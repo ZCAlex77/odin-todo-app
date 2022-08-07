@@ -1,9 +1,7 @@
-import { v4 as uuidv4 } from 'uuid';
-
-const createProject = (title, todos = []) => {
-  const id = uuidv4();
-
-  const addTodo = (todo) => todos.push(todo);
+const createProject = (id, title, todos) => {
+  const addTodo = (newTodo) => {
+    todos.push(newTodo);
+  };
   const removeTodo = (id) => {
     todos = todos.filter((todo) => todo.id !== id);
   };

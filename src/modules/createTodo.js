@@ -1,14 +1,20 @@
-import { v4 as uuidv4 } from 'uuid';
-
-const createTodo = (title, dueDate, notes, parentProject) => {
-  const done = false;
-  const id = uuidv4();
-
-  const changeDone = () => {
-    done = !done;
+const createTodo = ({ id, title, dueDate, notes, parentProject, status }) => {
+  const changeStatus = () => {
+    status = !status;
   };
 
-  return { id, title, dueDate, notes, parentProject, changeDone };
+  const getStatus = () => status;
+
+  return {
+    id,
+    title,
+    dueDate,
+    notes,
+    parentProject,
+    changeStatus,
+    getStatus,
+    status,
+  };
 };
 
 export default createTodo;

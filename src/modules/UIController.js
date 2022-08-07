@@ -28,7 +28,7 @@ const UIController = (() => {
     }
     todoDisplay.innerHTML = '';
     todos.forEach((todo) => {
-      todoDisplay.innerHTML += `<div class="todo" data-id="${todo.id}">
+      todoDisplay.innerHTML += `<div class="todo${todo.getStatus()?' checked':''}" data-id="${todo.id}">
         <p class="title">${todo.title}</p>
         <p class="dueDate">Due: ${todo.dueDate}</p>
         <button class="delete">X</button>

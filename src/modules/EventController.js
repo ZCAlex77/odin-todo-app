@@ -14,28 +14,31 @@ const EventController = (() => {
       ).textContent = `> ${this.textContent}`;
 
       UIController.renderTodos(Storage.getProject()?.todos ?? []);
+      Storage.getProject()?.todos.forEach(todo => addTodoEvent(todo));
       document.querySelector('#addTodo').style.display = 'block';
     };
   };
 
-  // const addTodoEvent = (todoId) =>{
-  //   const todoElement = document.querySelector(`[data-id="${todoId}"]`);
+  const addTodoEvent = (todo) =>{
+    const todoElement = document.querySelector(`[data-id="${todo.id}"]`);
 
-  //   // todoElement.onclick = function(){
+    // todoElement.onclick = function(){
 
-  //   // }
+    // }
 
-  //   todoElement.children[3].onclick = () =>{
-  //     const title = todoElement.children[0];
-  //     title.style.textDecoration = 'line-through';
-  //   }
+    todoElement.children[3].onclick = () =>{
+      todo.changeStatus();
+      Storage.getProject(todo.parentProject).todos.filter(t => t.id === todo.id)[0].status = todo.getStatus();
+      todoElement.classList.toggle('checked');
+      Storage.saveProjects();
+    }
 
-  //   todoElement.children[2].onclick = () =>{
-  //     projects.filter(project => project.title === )
-  //   }
-  // }
+    todoElement.children[2].onclick = () =>{
 
-  return { addLinkEvent };
+    }
+  }
+
+  return { addLinkEvent, addTodoEvent };
 })();
 
 export default EventController;

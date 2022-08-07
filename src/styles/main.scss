@@ -137,6 +137,14 @@ main {
       flex: 70%;
     }
 
+    &.checked .title{
+      text-decoration: line-through;
+    }
+
+    &.checked .check{
+      background: #5cd85c;
+    }
+
     button {
       border-radius: 50%;
       aspect-ratio: 1 / 1;
@@ -144,10 +152,6 @@ main {
       border: 2px solid #fff;
       background: transparent;
       color: #fff;
-    }
-
-    .check:hover {
-      background: #5cd85c;
     }
     .delete:hover {
       background: #f00;
