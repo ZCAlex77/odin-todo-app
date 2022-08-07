@@ -22,9 +22,13 @@ const UIController = (() => {
   };
 
   const renderTodos = (todos) => {
+    if(!todos.length){
+      todoDisplay.textContent = 'This project doesn\'t have any todos';
+      return;
+    }
     todoDisplay.innerHTML = '';
     todos.forEach((todo) => {
-      todoDisplay.innerHTML += `<div class="todo">
+      todoDisplay.innerHTML += `<div class="todo" data-id="${todo.id}">
         <p class="title">${todo.title}</p>
         <p class="dueDate">Due: ${todo.dueDate}</p>
         <button class="delete">X</button>
