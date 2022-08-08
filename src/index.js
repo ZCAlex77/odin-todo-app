@@ -11,7 +11,7 @@ const app = (() => {
 
   projectForm.onsubmit = function (ev) {
     ev.preventDefault();
-    const newProject = {id: uuidv4(), title: this.title.value, todos: []};
+    const newProject = { id: uuidv4(), title: this.title.value, todos: [] };
     if (
       !Storage.getProjects().filter(
         (project) => project.title === newProject.title
@@ -45,7 +45,7 @@ const app = (() => {
     todoForm.style.display =
       todoForm.style.display === 'flex' ? 'none' : 'flex';
 
-    if(todoForm.style.display === 'flex') todoForm.title.focus();
+    if (todoForm.style.display === 'flex') todoForm.title.focus();
   };
 
   const addProject = (newProject) => {

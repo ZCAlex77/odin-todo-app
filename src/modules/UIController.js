@@ -1,6 +1,20 @@
 const UIController = (() => {
   const projectDisplay = document.querySelector('#projects');
   const todoDisplay = document.querySelector('#todos');
+  const addTodoBtn = document.querySelector('#addTodo');
+
+  const displayProjectTitle = (title) => {
+    document.querySelector('#projectTitle').textContent = title
+      ? `> ${title}`
+      : '';
+  };
+
+  const highlightElement = (projectId) => {
+    document
+      .querySelectorAll('.active')
+      .forEach((element) => element.classList.toggle('active'));
+    document.querySelector(`[data-id="${projectId}"]`).classList.add('active');
+  };
 
   const renderProject = (project, projectsNum) => {
     if (projectsNum < 2) projectDisplay.textContent = '';
@@ -21,13 +35,15 @@ const UIController = (() => {
   };
 
   const renderTodos = (todos) => {
-    if(!todos.length){
-      todoDisplay.textContent = 'This project doesn\'t have any todos';
+    if (!todos.length) {
+      todoDisplay.textContent = "This project doesn't have any todos";
       return;
     }
     todoDisplay.innerHTML = '';
     todos.forEach((todo) => {
-      todoDisplay.innerHTML += `<div class="todo${todo.getStatus()?' checked':''}" data-id="${todo.id}">
+      todoDisplay.innerHTML += `<div class="todo${
+        todo.getStatus() ? ' checked' : ''
+      }" data-id="${todo.id}">
         <p class="title">${todo.title}</p>
         <p class="dueDate">Due: ${todo.dueDate}</p>
         <button class="delete">X</button>
@@ -36,12 +52,22 @@ const UIController = (() => {
     });
   };
 
-  const removeTodo = (id) =>{
+  const removeTodo = (id) => {
     document.querySelector(`[data-id="${id}"]`).remove();
-    if(!todoDisplay.textContent) todoDisplay.textContent = 'This project doesn\'t have any todos';
-  }
+    if (!todoDisplay.textContent)
+      todoDisplay.textContent = "This project doesn't have any todos";
+  };
+
+  const onProjectClick = (projectId, projectTitle, todos) => {
+    displayProjectTitle(projectTitle);
+    highlightElement(projectId);
+    renderTodos(todos);
+    if (projectTitle) addTodoBtn.style.display = 'block';
+    else addTodoBtn.style.display = 'none';
+  };
 
   return {
+    onProjectClick,
     renderProject,
     renderProjectList,
     renderTodos,
