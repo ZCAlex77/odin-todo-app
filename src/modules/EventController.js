@@ -13,8 +13,8 @@ const EventController = (() => {
         '#projectTitle'
       ).textContent = `> ${this.textContent}`;
 
-      UIController.renderTodos(Storage.getProject()?.todos ?? []);
-      Storage.getProject()?.todos.forEach(todo => addTodoEvent(todo));
+      UIController.renderTodos(Storage.getProject()?.getTodos() ?? []);
+      Storage.getProject()?.getTodos().forEach(todo => addTodoEvent(todo));
       document.querySelector('#addTodo').style.display = 'block';
     };
   };
@@ -26,15 +26,17 @@ const EventController = (() => {
 
     // }
 
-    todoElement.children[3].onclick = () =>{
-      todo.changeStatus();
-      Storage.getProject(todo.parentProject).todos.filter(t => t.id === todo.id)[0].status = todo.getStatus();
-      todoElement.classList.toggle('checked');
-      Storage.saveProjects();
+    todoElement.children[2].onclick = () =>{
+      let parentId = todo.parentProject;
+      UIController.removeTodo(todo.id);
+      Storage.removeTodo(todo.id, parentId);
     }
 
-    todoElement.children[2].onclick = () =>{
-
+    todoElement.children[3].onclick = () =>{
+      todo.changeStatus();
+      Storage.getProject(todo.parentProject).getTodos().filter(t => t.id === todo.id)[0].status = todo.getStatus();
+      todoElement.classList.toggle('checked');
+      Storage.saveProjects();
     }
   }
 

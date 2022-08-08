@@ -10,7 +10,7 @@ const Storage = (() => {
           return {
             id: project.id,
             title: project.title,
-            todos: project.todos,
+            todos: project.getTodos(),
           };
         })
       )
@@ -33,7 +33,7 @@ const Storage = (() => {
   })();
 
   const getCurrentProject = () => currentProject;
-  const setCurrentProject = (project) => (currentProject = project);
+  const setCurrentProject = (projectId) => (currentProject = projectId);
   const getProject = (projectId = getCurrentProject()) =>
     projects.filter((project) => project.id === projectId)[0];
   const addProject = (newProject) => {
@@ -45,17 +45,18 @@ const Storage = (() => {
   const getProjects = () => projects;
 
   const addTodo = (newTodo) => {
-    getProject().todos.push(createTodo(newTodo));
+    getProject().addTodo(createTodo(newTodo));
     saveProjects();
   };
-  const removeTodo = (deletedTodo) => {
-    let project = getProject(deletedTodo.parent);
-    project.todos = project.todos.filter((todo) => todo.id !== deletedTodo.id);
+  const removeTodo = (todoId, parentId) => {
+    let project = getProject(parentId);
+    project.removeTodo(todoId);
+    saveProjects();
   };
   const getAllTodos = () => {
     let allTodos = [];
     projects.forEach((project) => {
-      allTodos = allTodos.concat([...project.todos]);
+      allTodos = allTodos.concat([...project.getTodos()]);
     });
     return allTodos;
   };

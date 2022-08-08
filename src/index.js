@@ -57,7 +57,7 @@ const app = (() => {
   const addTodo = (newTodo) => {
     Storage.getProjects((project) => project);
     Storage.addTodo(newTodo);
-    UIController.renderTodos(Storage.getProject().todos);
+    UIController.renderTodos(Storage.getProject().getTodos());
     EventController.addTodoEvent(newTodo);
   };
 

@@ -14,7 +14,6 @@ const UIController = (() => {
   const renderProjectList = (projects) => {
     if (!projects.length) {
       projectDisplay.textContent = 'No projects yet.';
-      document.querySelector('#todos').textContent = 'No todos set.';
       return;
     }
 
@@ -37,10 +36,16 @@ const UIController = (() => {
     });
   };
 
+  const removeTodo = (id) =>{
+    document.querySelector(`[data-id="${id}"]`).remove();
+    if(!todoDisplay.textContent) todoDisplay.textContent = 'This project doesn\'t have any todos';
+  }
+
   return {
     renderProject,
     renderProjectList,
     renderTodos,
+    removeTodo,
   };
 })();
 
