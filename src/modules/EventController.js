@@ -5,6 +5,7 @@ const EventController = (() => {
   document.querySelector('#allTodos').onclick = function () {
     const todos = Storage.getAllTodos();
     UIController.onProjectClick('allTodos', '', todos);
+    todos.forEach((todo) => addTodoEvent(todo));
   };
 
   const addLinkEvent = (project) => {
@@ -17,7 +18,8 @@ const EventController = (() => {
   };
 
   const addTodoEvent = (todo) => {
-    const todoElement = document.querySelector(`[data-id="${todo.id}"]`);
+    const todoElement = document.querySelector(`[data-id="${todo.id}"]`)
+      .children[1];
     // todoElement.onclick = function(){
 
     // }
@@ -33,8 +35,12 @@ const EventController = (() => {
       Storage.getProject(todo.parentProject)
         .getTodos()
         .filter((t) => t.id === todo.id)[0].status = todo.getStatus();
-      todoElement.classList.toggle('checked');
+      todoElement.parentElement.classList.toggle('checked');
       Storage.saveProjects();
+    };
+
+    todoElement.children[4].onclick = () => {
+      UIController.onTodoExtend(todo.id);
     };
   };
 

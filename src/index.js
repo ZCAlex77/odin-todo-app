@@ -58,7 +58,9 @@ const app = (() => {
     Storage.getProjects((project) => project);
     Storage.addTodo(newTodo);
     UIController.renderTodos(Storage.getProject().getTodos());
-    EventController.addTodoEvent(newTodo);
+    Storage.getProject()
+      .getTodos()
+      .forEach((todo) => EventController.addTodoEvent(todo));
   };
 
   const setup = (() => {

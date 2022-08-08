@@ -44,10 +44,16 @@ const UIController = (() => {
       todoDisplay.innerHTML += `<div class="todo${
         todo.getStatus() ? ' checked' : ''
       }" data-id="${todo.id}">
-        <p class="title">${todo.title}</p>
-        <p class="dueDate">Due: ${todo.dueDate}</p>
-        <button class="delete">X</button>
-        <button class="check">&check;</button>
+        <p class="notes">${
+          todo.notes.length ? todo.notes : 'The are no notes for this todo.'
+        }</p>
+        <div class="todo-header">
+          <p class="title">${todo.title}</p>
+          <p class="dueDate">Due: ${todo.dueDate}</p>
+          <button class="delete">X</button>
+          <button class="check">&check;</button>
+          <button class="extend">&#x226B;</button>
+        </div>
         </div>`;
     });
   };
@@ -56,6 +62,15 @@ const UIController = (() => {
     document.querySelector(`[data-id="${id}"]`).remove();
     if (!todoDisplay.textContent)
       todoDisplay.textContent = "This project doesn't have any todos";
+  };
+
+  const onTodoExtend = (todoId) => {
+    let lastExtended = document.querySelector('.extended');
+    lastExtended?.classList.toggle('extended');
+    if (lastExtended?.getAttribute('data-id') !== todoId)
+      document
+        .querySelector(`[data-id="${todoId}"]`)
+        .classList.toggle('extended');
   };
 
   const onProjectClick = (projectId, projectTitle, todos) => {
@@ -68,6 +83,7 @@ const UIController = (() => {
 
   return {
     onProjectClick,
+    onTodoExtend,
     renderProject,
     renderProjectList,
     renderTodos,
