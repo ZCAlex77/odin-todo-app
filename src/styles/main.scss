@@ -136,11 +136,12 @@ main {
     flex-direction: column;
     width: 100%;
     gap: 10px;
+    overflow-y: scroll;
   }
 
   .todo {
     background: #555;
-    width: 100%;
+    width: calc(100% - 10px);
     height: 40px;
     border-radius: 999px;
     padding: 5px 10px 5px 15px;
