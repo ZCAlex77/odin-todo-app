@@ -22,7 +22,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #777;
+  background: #ddd;
 }
 
 body {
@@ -48,8 +48,8 @@ header {
 }
 
 nav {
-  background-color: #666;
-  color: #fff;
+  background-color: #eee;
+  color: #222;
   padding: 16px;
   grid-area: 3 / 2 / 3 / 2;
   border-radius: 10px;
@@ -68,15 +68,17 @@ nav {
       font-size: 1.2rem;
       cursor: pointer;
       margin-bottom: 10px;
-      border: 1px solid #fff;
+      border: 1px solid #222;
       padding: 5px 15px;
       border-radius: 999px;
       white-space: nowrap;
+      background-color: #bbb;
+      color: #111;
 
       &:hover,
       &.active {
-        background: #fff;
-        color: #666;
+        background-color: #222;
+        color: #eee;
       }
     }
   }
@@ -88,8 +90,13 @@ nav {
     gap: 10px;
   }
 
-  input {
+  ::placeholder {
     color: #222;
+  }
+
+  input {
+    background: #ddd;
+    color: #111;
     padding: 5px;
     flex: 80%;
     font-size: 1.1rem;
@@ -151,7 +158,8 @@ main {
     }
 
     .todo-header {
-      background: #555;
+      background: #eee;
+      color: #222;
       padding: 5px 10px 5px 15px;
       border-radius: 999px;
       height: 40px;
@@ -169,8 +177,8 @@ main {
       height: 0px;
       transition: height 1s;
       overflow-y: hidden;
-      background: #fff;
-      color: #222;
+      background-color: #666;
+      color: #eee;
       z-index: -1;
       position: relative;
       border-radius: 30px 30px 20px 20px;
@@ -194,8 +202,8 @@ main {
         padding: 45px 20px 10px 20px;
       }
       .extend {
-        background: #fff;
-        color: #555;
+        background-color: #666;
+        color: #eee;
       }
     }
 
@@ -203,9 +211,10 @@ main {
       border-radius: 50%;
       aspect-ratio: 1 / 1;
       height: 100%;
-      border: 2px solid #fff;
+      border: 1px solid #666;
       background: transparent;
-      color: #fff;
+      color: #222;
+      font-weight: bold;
     }
 
     .delete:hover {
@@ -217,8 +226,8 @@ main {
       font-weight: bold;
 
       &:hover {
-        background: #fff;
-        color: #555;
+        background: #666;
+        color: #eee;
       }
     }
   }
@@ -243,7 +252,9 @@ main {
 }
 
 #newTodo {
-  background-color: #777;
+  background-color: #eeea;
+  backdrop-filter: blur(2px);
+  color: #222;
   position: absolute;
   top: 0;
   right: 0;

@@ -79,6 +79,7 @@ const UIController = (() => {
     renderTodos(todos);
     if (projectTitle) addTodoBtn.style.display = 'block';
     else addTodoBtn.style.display = 'none';
+    document.querySelector('#newTodo').style.display = 'none';
   };
 
   return {
