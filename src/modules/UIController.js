@@ -19,10 +19,16 @@ const UIController = (() => {
   const renderProject = (project, projectsNum) => {
     if (projectsNum < 2) projectDisplay.textContent = '';
     let li = document.createElement('li');
-    li.textContent = project.title;
     li.setAttribute('data-id', project.id);
-
+    li.innerHTML = `
+      <span>${project.title}</span>
+      <button>X</button>
+    `;
     projectDisplay.append(li);
+  };
+
+  const removeProject = (projectId) => {
+    document.querySelector(`[data-id="${projectId}"]`).remove();
   };
 
   const renderProjectList = (projects) => {
@@ -86,6 +92,7 @@ const UIController = (() => {
     onProjectClick,
     onTodoExtend,
     renderProject,
+    removeProject,
     renderProjectList,
     renderTodos,
     removeTodo,

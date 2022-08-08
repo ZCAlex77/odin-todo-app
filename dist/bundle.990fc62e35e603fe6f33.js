@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  color: inherit;\n  font-family: \"Roboto\", sans-serif;\n}\n\n::-webkit-scrollbar {\n  appearance: none;\n  width: 10px;\n}\n\n::-webkit-scrollbar-thumb {\n  background: #222;\n  border-radius: 10px;\n}\n\n::-webkit-scrollbar-track {\n  background: #777;\n}\n\nbody {\n  background: #333;\n  display: grid;\n  grid-template: 4rem 32px 1fr 32px/32px 25% 32px 1fr 32px;\n  height: 100vh;\n}\n\nbutton {\n  cursor: pointer;\n}\n\nheader {\n  background-color: #222;\n  color: #fff;\n  padding: 16px 32px;\n  grid-area: 1/1/1/6;\n}\nheader h1 {\n  font-size: 2rem;\n}\n\nnav {\n  background-color: #666;\n  color: #fff;\n  padding: 16px;\n  grid-area: 3/2/3/2;\n  border-radius: 10px;\n  overflow-y: scroll;\n}\nnav h2,\nnav hr,\nnav form {\n  margin-bottom: 10px;\n}\nnav ul {\n  list-style: none;\n}\nnav ul li {\n  font-size: 1.2rem;\n  cursor: pointer;\n  margin-bottom: 10px;\n  border: 1px solid #fff;\n  padding: 5px 15px;\n  border-radius: 999px;\n  white-space: nowrap;\n}\nnav ul li:hover, nav ul li.active {\n  background: #fff;\n  color: #666;\n}\nnav form {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 10px;\n}\nnav input {\n  color: #222;\n  padding: 5px;\n  flex: 80%;\n  font-size: 1.1rem;\n}\nnav button {\n  width: 32px;\n  height: 32px;\n  background: #5cd85c;\n  border: 0;\n  color: #fff;\n  font-weight: bold;\n  border-radius: 50%;\n  font-size: 1.2rem;\n}\n\nmain {\n  grid-area: 3/4/3/4;\n  color: #fff;\n  position: relative;\n}\nmain #allTodos {\n  padding: 5px 10px;\n  border: 2px solid #fff;\n  border-radius: 10px;\n  cursor: pointer;\n  transition: background-color 0.2s, color 0.2s;\n}\nmain #allTodos:hover, main #allTodos.active {\n  background-color: #fff;\n  color: #333;\n}\nmain hr {\n  margin-bottom: 1rem;\n  margin-top: 1rem;\n}\nmain #todos {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  gap: 10px;\n}\nmain .todo {\n  background: #555;\n  width: 100%;\n  height: 40px;\n  border-radius: 999px;\n  padding: 5px 10px 5px 15px;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\nmain .todo .title {\n  flex: 70%;\n}\nmain .todo.checked .title {\n  text-decoration: line-through;\n}\nmain .todo.checked .check {\n  background: #5cd85c;\n}\nmain .todo button {\n  border-radius: 50%;\n  aspect-ratio: 1/1;\n  height: 100%;\n  border: 2px solid #fff;\n  background: transparent;\n  color: #fff;\n}\nmain .todo .delete:hover {\n  background: #f00;\n}\n\n#addTodo {\n  padding: 0.5rem;\n  background: #5cd85c;\n  color: #222;\n  border: 0;\n  border-radius: 0 10px 0 10px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  font-weight: bold;\n  display: none;\n  z-index: 11;\n}\n#addTodo:hover {\n  color: #fff;\n}\n\n#newTodo {\n  background-color: #777;\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 300px;\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  padding: 1rem;\n  border-radius: 10px;\n  display: none;\n  z-index: 10;\n}\n#newTodo label {\n  text-align: center;\n  font-weight: bold;\n  margin-bottom: 0.5rem;\n}\n#newTodo input,\n#newTodo textarea {\n  margin-bottom: 1rem;\n  font-size: 0.9rem;\n}\n#newTodo input {\n  text-align: center;\n  padding: 5px;\n}\n#newTodo textarea {\n  padding: 10px;\n}\n#newTodo button {\n  border-radius: 10px;\n  border: 0;\n  background: #5cd85c;\n  padding: 5px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAEA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AAAF;;AAGA;EACE,cAAA;EACA,iCAAA;AAAF;;AAGA;EACE,gBAAA;EACA,WAAA;AAAF;;AAGA;EACE,gBAAA;EACA,mBAAA;AAAF;;AAGA;EACE,gBAAA;AAAF;;AAGA;EACE,gBAAA;EACA,aAAA;EACA,wDAAA;EACA,aAAA;AAAF;;AAGA;EACE,eAAA;AAAF;;AAGA;EACE,sBAAA;EACA,WAAA;EACA,kBAAA;EACA,kBAAA;AAAF;AAEE;EACE,eAAA;AAAJ;;AAIA;EACE,sBAAA;EACA,WAAA;EACA,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,kBAAA;AADF;AAGE;;;EAGE,mBAAA;AADJ;AAIE;EACE,gBAAA;AAFJ;AAII;EACE,iBAAA;EACA,eAAA;EACA,mBAAA;EACA,sBAAA;EACA,iBAAA;EACA,oBAAA;EACA,mBAAA;AAFN;AAIM;EAEE,gBAAA;EACA,WAAA;AAHR;AAQE;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,SAAA;AANJ;AASE;EACE,WAAA;EACA,YAAA;EACA,SAAA;EACA,iBAAA;AAPJ;AAUE;EACE,WAAA;EACA,YAAA;EACA,mBAAA;EACA,SAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EACA,iBAAA;AARJ;;AAYA;EACE,kBAAA;EACA,WAAA;EACA,kBAAA;AATF;AAWE;EACE,iBAAA;EACA,sBAAA;EACA,mBAAA;EACA,eAAA;EACA,6CAAA;AATJ;AAWI;EAEE,sBAAA;EACA,WAAA;AAVN;AAcE;EACE,mBAAA;EACA,gBAAA;AAZJ;AAeE;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,SAAA;AAbJ;AAgBE;EACE,gBAAA;EACA,WAAA;EACA,YAAA;EACA,oBAAA;EACA,0BAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;AAdJ;AAgBI;EACE,SAAA;AAdN;AAiBI;EACE,6BAAA;AAfN;AAkBI;EACE,mBAAA;AAhBN;AAmBI;EACE,kBAAA;EACA,iBAAA;EACA,YAAA;EACA,sBAAA;EACA,uBAAA;EACA,WAAA;AAjBN;AAmBI;EACE,gBAAA;AAjBN;;AAsBA;EACE,eAAA;EACA,mBAAA;EACA,WAAA;EACA,SAAA;EACA,4BAAA;EACA,kBAAA;EACA,MAAA;EACA,QAAA;EACA,iBAAA;EACA,aAAA;EACA,WAAA;AAnBF;AAqBE;EACE,WAAA;AAnBJ;;AAuBA;EACE,sBAAA;EACA,kBAAA;EACA,MAAA;EACA,QAAA;EACA,YAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,aAAA;EACA,mBAAA;EACA,aAAA;EACA,WAAA;AApBF;AAsBE;EACE,kBAAA;EACA,iBAAA;EACA,qBAAA;AApBJ;AAuBE;;EAEE,mBAAA;EACA,iBAAA;AArBJ;AAwBE;EACE,kBAAA;EACA,YAAA;AAtBJ;AAyBE;EACE,aAAA;AAvBJ;AA0BE;EACE,mBAAA;EACA,SAAA;EACA,mBAAA;EACA,YAAA;AAxBJ","sourcesContent":["@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  color: inherit;\r\n  font-family: 'Roboto', sans-serif;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  appearance: none;\r\n  width: 10px;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n  background: #222;\r\n  border-radius: 10px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n  background: #777;\r\n}\r\n\r\nbody {\r\n  background: #333;\r\n  display: grid;\r\n  grid-template: 4rem 32px 1fr 32px / 32px 25% 32px 1fr 32px;\r\n  height: 100vh;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n}\r\n\r\nheader {\r\n  background-color: #222;\r\n  color: #fff;\r\n  padding: 16px 32px;\r\n  grid-area: 1 / 1 / 1 / 6;\r\n\r\n  h1 {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\nnav {\r\n  background-color: #666;\r\n  color: #fff;\r\n  padding: 16px;\r\n  grid-area: 3 / 2 / 3 / 2;\r\n  border-radius: 10px;\r\n  overflow-y: scroll;\r\n\r\n  h2,\r\n  hr,\r\n  form {\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  ul {\r\n    list-style: none;\r\n\r\n    li {\r\n      font-size: 1.2rem;\r\n      cursor: pointer;\r\n      margin-bottom: 10px;\r\n      border: 1px solid #fff;\r\n      padding: 5px 15px;\r\n      border-radius: 999px;\r\n      white-space: nowrap;\r\n\r\n      &:hover,\r\n      &.active {\r\n        background: #fff;\r\n        color: #666;\r\n      }\r\n    }\r\n  }\r\n\r\n  form {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    gap: 10px;\r\n  }\r\n\r\n  input {\r\n    color: #222;\r\n    padding: 5px;\r\n    flex: 80%;\r\n    font-size: 1.1rem;\r\n  }\r\n\r\n  button {\r\n    width: 32px;\r\n    height: 32px;\r\n    background: #5cd85c;\r\n    border: 0;\r\n    color: #fff;\r\n    font-weight: bold;\r\n    border-radius: 50%;\r\n    font-size: 1.2rem;\r\n  }\r\n}\r\n\r\nmain {\r\n  grid-area: 3 / 4 / 3 / 4;\r\n  color: #fff;\r\n  position: relative;\r\n\r\n  #allTodos {\r\n    padding: 5px 10px;\r\n    border: 2px solid #fff;\r\n    border-radius: 10px;\r\n    cursor: pointer;\r\n    transition: background-color 0.2s, color 0.2s;\r\n\r\n    &:hover,\r\n    &.active {\r\n      background-color: #fff;\r\n      color: #333;\r\n    }\r\n  }\r\n\r\n  hr {\r\n    margin-bottom: 1rem;\r\n    margin-top: 1rem;\r\n  }\r\n\r\n  #todos {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    gap: 10px;\r\n  }\r\n\r\n  .todo {\r\n    background: #555;\r\n    width: 100%;\r\n    height: 40px;\r\n    border-radius: 999px;\r\n    padding: 5px 10px 5px 15px;\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 10px;\r\n\r\n    .title {\r\n      flex: 70%;\r\n    }\r\n\r\n    &.checked .title {\r\n      text-decoration: line-through;\r\n    }\r\n\r\n    &.checked .check {\r\n      background: #5cd85c;\r\n    }\r\n\r\n    button {\r\n      border-radius: 50%;\r\n      aspect-ratio: 1 / 1;\r\n      height: 100%;\r\n      border: 2px solid #fff;\r\n      background: transparent;\r\n      color: #fff;\r\n    }\r\n    .delete:hover {\r\n      background: #f00;\r\n    }\r\n  }\r\n}\r\n\r\n#addTodo {\r\n  padding: 0.5rem;\r\n  background: #5cd85c;\r\n  color: #222;\r\n  border: 0;\r\n  border-radius: 0 10px 0 10px;\r\n  position: absolute;\r\n  top: 0;\r\n  right: 0;\r\n  font-weight: bold;\r\n  display: none;\r\n  z-index: 11;\r\n\r\n  &:hover {\r\n    color: #fff;\r\n  }\r\n}\r\n\r\n#newTodo {\r\n  background-color: #777;\r\n  position: absolute;\r\n  top: 0;\r\n  right: 0;\r\n  width: 300px;\r\n  height: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  padding: 1rem;\r\n  border-radius: 10px;\r\n  display: none;\r\n  z-index: 10;\r\n\r\n  label {\r\n    text-align: center;\r\n    font-weight: bold;\r\n    margin-bottom: 0.5rem;\r\n  }\r\n\r\n  input,\r\n  textarea {\r\n    margin-bottom: 1rem;\r\n    font-size: 0.9rem;\r\n  }\r\n\r\n  input {\r\n    text-align: center;\r\n    padding: 5px;\r\n  }\r\n\r\n  textarea {\r\n    padding: 10px;\r\n  }\r\n\r\n  button {\r\n    border-radius: 10px;\r\n    border: 0;\r\n    background: #5cd85c;\r\n    padding: 5px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  color: inherit;\n  font-family: \"Roboto\", sans-serif;\n}\n\n::-webkit-scrollbar {\n  appearance: none;\n  width: 10px;\n}\n\n::-webkit-scrollbar-thumb {\n  background: #222;\n  border-radius: 10px;\n}\n\n::-webkit-scrollbar-track {\n  background: #ddd;\n}\n\nbody {\n  background: #333;\n  display: grid;\n  grid-template: 4rem 32px 1fr 32px/32px 25% 32px 1fr 32px;\n  height: 100vh;\n}\n\nbutton {\n  cursor: pointer;\n}\n\nheader {\n  background-color: #222;\n  color: #fff;\n  padding: 16px 32px;\n  grid-area: 1/1/1/6;\n}\nheader h1 {\n  font-size: 2rem;\n}\n\nnav {\n  background-color: #eee;\n  color: #222;\n  padding: 16px;\n  grid-area: 3/2/3/2;\n  border-radius: 10px;\n  overflow-y: scroll;\n}\nnav h2,\nnav hr,\nnav form {\n  margin-bottom: 10px;\n}\nnav ul {\n  list-style: none;\n}\nnav ul li {\n  font-size: 20px;\n  cursor: pointer;\n  margin-bottom: 10px;\n  position: relative;\n  display: flex;\n}\nnav ul li.active span {\n  background-color: #222;\n  color: #eee;\n}\nnav ul li span {\n  padding: 5px 15px;\n  border: 1px solid #222;\n  display: block;\n  border-radius: 999px 0 0 999px;\n  background-color: #bbb;\n  color: #111;\n  white-space: nowrap;\n  width: calc(100% - 34px);\n}\nnav ul li span:hover {\n  background-color: #222;\n  color: #eee;\n}\nnav ul li button {\n  border-radius: 0 999px 999px 0;\n  border: 1px solid #222;\n  background: #e93a3a;\n  height: 36px;\n  width: 36px;\n}\nnav form {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 10px;\n}\nnav form button {\n  width: 32px;\n  height: 32px;\n  background: #5cd85c;\n  border: 0;\n  color: #fff;\n  font-weight: bold;\n  border-radius: 50%;\n  font-size: 1.2rem;\n}\nnav ::placeholder {\n  color: #222;\n}\nnav input {\n  background: #ddd;\n  color: #111;\n  padding: 5px;\n  flex: 80%;\n  font-size: 1.1rem;\n}\n\nmain {\n  grid-area: 3/4/3/4;\n  color: #fff;\n  position: relative;\n}\nmain #allTodos {\n  padding: 5px 10px;\n  border: 2px solid #fff;\n  border-radius: 10px;\n  cursor: pointer;\n  transition: background-color 0.2s, color 0.2s;\n}\nmain #allTodos:hover, main #allTodos.active {\n  background-color: #fff;\n  color: #333;\n}\nmain hr {\n  margin-bottom: 1rem;\n  margin-top: 1rem;\n}\nmain #todos {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  height: 86%;\n  gap: 10px;\n  overflow-y: scroll;\n}\nmain .todo {\n  width: calc(100% - 10px);\n  min-height: 40px;\n  position: relative;\n}\nmain .todo .todo-header,\nmain .todo .notes {\n  width: 100%;\n}\nmain .todo .todo-header {\n  background: #eee;\n  color: #222;\n  padding: 5px 10px 5px 15px;\n  border-radius: 999px;\n  height: 40px;\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  position: absolute;\n}\nmain .todo .title {\n  flex: 70%;\n}\nmain .todo .notes {\n  height: 0px;\n  transition: height 1s;\n  overflow-y: hidden;\n  background-color: #666;\n  color: #eee;\n  z-index: -1;\n  position: relative;\n  border-radius: 30px 30px 20px 20px;\n}\nmain .todo.checked .title {\n  text-decoration: line-through;\n}\nmain .todo.checked .check {\n  background: #5cd85c;\n}\nmain .todo.extended .todo-header {\n  top: 0;\n  border-radius: 20px 20px 0 0;\n}\nmain .todo.extended .notes {\n  height: auto;\n  padding: 45px 20px 10px 20px;\n}\nmain .todo.extended .extend {\n  background-color: #666;\n  color: #eee;\n}\nmain .todo button {\n  border-radius: 50%;\n  aspect-ratio: 1/1;\n  height: 100%;\n  border: 1px solid #666;\n  background: transparent;\n  color: #222;\n  font-weight: bold;\n}\nmain .todo .delete:hover {\n  background: #f00;\n}\nmain .todo .extend {\n  transform: rotate(0.25turn);\n  font-weight: bold;\n}\nmain .todo .extend:hover {\n  background: #666;\n  color: #eee;\n}\n\n#addTodo {\n  padding: 0.5rem;\n  background: #5cd85c;\n  color: #222;\n  border: 0;\n  border-radius: 0 10px 0 10px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  font-weight: bold;\n  display: none;\n  z-index: 11;\n}\n#addTodo:hover {\n  color: #fff;\n}\n\n#newTodo {\n  background-color: rgba(238, 238, 238, 0.6666666667);\n  backdrop-filter: blur(2px);\n  color: #222;\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 300px;\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  padding: 1rem;\n  border-radius: 10px;\n  display: none;\n  z-index: 10;\n}\n#newTodo label {\n  text-align: center;\n  font-weight: bold;\n  margin-bottom: 0.5rem;\n}\n#newTodo input,\n#newTodo textarea {\n  margin-bottom: 1rem;\n  font-size: 0.9rem;\n}\n#newTodo input {\n  text-align: center;\n  padding: 5px;\n}\n#newTodo textarea {\n  padding: 10px;\n}\n#newTodo button {\n  border-radius: 10px;\n  border: 0;\n  background: #5cd85c;\n  padding: 5px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"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","sourcesContent":["@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  color: inherit;\r\n  font-family: 'Roboto', sans-serif;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  appearance: none;\r\n  width: 10px;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n  background: #222;\r\n  border-radius: 10px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n  background: #ddd;\r\n}\r\n\r\nbody {\r\n  background: #333;\r\n  display: grid;\r\n  grid-template: 4rem 32px 1fr 32px / 32px 25% 32px 1fr 32px;\r\n  height: 100vh;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n}\r\n\r\nheader {\r\n  background-color: #222;\r\n  color: #fff;\r\n  padding: 16px 32px;\r\n  grid-area: 1 / 1 / 1 / 6;\r\n\r\n  h1 {\r\n    font-size: 2rem;\r\n  }\r\n}\r\n\r\nnav {\r\n  background-color: #eee;\r\n  color: #222;\r\n  padding: 16px;\r\n  grid-area: 3 / 2 / 3 / 2;\r\n  border-radius: 10px;\r\n  overflow-y: scroll;\r\n\r\n  h2,\r\n  hr,\r\n  form {\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  ul {\r\n    list-style: none;\r\n\r\n    li {\r\n      font-size: 20px;\r\n      cursor: pointer;\r\n      margin-bottom: 10px;\r\n      position: relative;\r\n      display: flex;\r\n\r\n      &.active span {\r\n        background-color: #222;\r\n        color: #eee;\r\n      }\r\n\r\n      span {\r\n        padding: 5px 15px;\r\n        border: 1px solid #222;\r\n        display: block;\r\n        border-radius: 999px 0 0 999px;\r\n        background-color: #bbb;\r\n        color: #111;\r\n        white-space: nowrap;\r\n        width: calc(100% - 34px);\r\n\r\n        &:hover {\r\n          background-color: #222;\r\n          color: #eee;\r\n        }\r\n      }\r\n\r\n      button {\r\n        border-radius: 0 999px 999px 0;\r\n        border: 1px solid #222;\r\n        background: #e93a3a;\r\n        height: 36px;\r\n        width: 36px;\r\n      }\r\n    }\r\n  }\r\n\r\n  form {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    gap: 10px;\r\n\r\n    button {\r\n      width: 32px;\r\n      height: 32px;\r\n      background: #5cd85c;\r\n      border: 0;\r\n      color: #fff;\r\n      font-weight: bold;\r\n      border-radius: 50%;\r\n      font-size: 1.2rem;\r\n    }\r\n  }\r\n\r\n  ::placeholder {\r\n    color: #222;\r\n  }\r\n\r\n  input {\r\n    background: #ddd;\r\n    color: #111;\r\n    padding: 5px;\r\n    flex: 80%;\r\n    font-size: 1.1rem;\r\n  }\r\n}\r\n\r\nmain {\r\n  grid-area: 3 / 4 / 3 / 4;\r\n  color: #fff;\r\n  position: relative;\r\n\r\n  #allTodos {\r\n    padding: 5px 10px;\r\n    border: 2px solid #fff;\r\n    border-radius: 10px;\r\n    cursor: pointer;\r\n    transition: background-color 0.2s, color 0.2s;\r\n\r\n    &:hover,\r\n    &.active {\r\n      background-color: #fff;\r\n      color: #333;\r\n    }\r\n  }\r\n\r\n  hr {\r\n    margin-bottom: 1rem;\r\n    margin-top: 1rem;\r\n  }\r\n\r\n  #todos {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    height: 86%;\r\n    gap: 10px;\r\n    overflow-y: scroll;\r\n  }\r\n\r\n  .todo {\r\n    width: calc(100% - 10px);\r\n    min-height: 40px;\r\n    position: relative;\r\n\r\n    .todo-header,\r\n    .notes {\r\n      width: 100%;\r\n    }\r\n\r\n    .todo-header {\r\n      background: #eee;\r\n      color: #222;\r\n      padding: 5px 10px 5px 15px;\r\n      border-radius: 999px;\r\n      height: 40px;\r\n      display: flex;\r\n      align-items: center;\r\n      gap: 10px;\r\n      position: absolute;\r\n    }\r\n\r\n    .title {\r\n      flex: 70%;\r\n    }\r\n\r\n    .notes {\r\n      height: 0px;\r\n      transition: height 1s;\r\n      overflow-y: hidden;\r\n      background-color: #666;\r\n      color: #eee;\r\n      z-index: -1;\r\n      position: relative;\r\n      border-radius: 30px 30px 20px 20px;\r\n    }\r\n\r\n    &.checked .title {\r\n      text-decoration: line-through;\r\n    }\r\n\r\n    &.checked .check {\r\n      background: #5cd85c;\r\n    }\r\n\r\n    &.extended {\r\n      .todo-header {\r\n        top: 0;\r\n        border-radius: 20px 20px 0 0;\r\n      }\r\n      .notes {\r\n        height: auto;\r\n        padding: 45px 20px 10px 20px;\r\n      }\r\n      .extend {\r\n        background-color: #666;\r\n        color: #eee;\r\n      }\r\n    }\r\n\r\n    button {\r\n      border-radius: 50%;\r\n      aspect-ratio: 1 / 1;\r\n      height: 100%;\r\n      border: 1px solid #666;\r\n      background: transparent;\r\n      color: #222;\r\n      font-weight: bold;\r\n    }\r\n\r\n    .delete:hover {\r\n      background: #f00;\r\n    }\r\n\r\n    .extend {\r\n      transform: rotate(0.25turn);\r\n      font-weight: bold;\r\n\r\n      &:hover {\r\n        background: #666;\r\n        color: #eee;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n#addTodo {\r\n  padding: 0.5rem;\r\n  background: #5cd85c;\r\n  color: #222;\r\n  border: 0;\r\n  border-radius: 0 10px 0 10px;\r\n  position: absolute;\r\n  top: 0;\r\n  right: 0;\r\n  font-weight: bold;\r\n  display: none;\r\n  z-index: 11;\r\n\r\n  &:hover {\r\n    color: #fff;\r\n  }\r\n}\r\n\r\n#newTodo {\r\n  background-color: #eeea;\r\n  backdrop-filter: blur(2px);\r\n  color: #222;\r\n  position: absolute;\r\n  top: 0;\r\n  right: 0;\r\n  width: 300px;\r\n  height: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  padding: 1rem;\r\n  border-radius: 10px;\r\n  display: none;\r\n  z-index: 10;\r\n\r\n  label {\r\n    text-align: center;\r\n    font-weight: bold;\r\n    margin-bottom: 0.5rem;\r\n  }\r\n\r\n  input,\r\n  textarea {\r\n    margin-bottom: 1rem;\r\n    font-size: 0.9rem;\r\n  }\r\n\r\n  input {\r\n    text-align: center;\r\n    padding: 5px;\r\n  }\r\n\r\n  textarea {\r\n    padding: 10px;\r\n  }\r\n\r\n  button {\r\n    border-radius: 10px;\r\n    border: 0;\r\n    background: #5cd85c;\r\n    padding: 5px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -691,31 +691,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 /* harmony import */ var _UIController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UIController */ "./src/modules/UIController.js");
 /* harmony import */ var _Storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Storage */ "./src/modules/Storage.js");
 
 
 
+
 const EventController = (() => {
-  document.querySelector('#allTodos').onclick = function () {
+  const projectForm = document.querySelector('#newProject'),
+    todoForm = document.querySelector('#newTodo'),
+    addTodoBtn = document.querySelector('#addTodo'),
+    allTodosBtn = document.querySelector('#allTodos');
+
+  projectForm.onsubmit = function (ev) {
+    ev.preventDefault();
+    const newProject = { id: (0,uuid__WEBPACK_IMPORTED_MODULE_2__["default"])(), title: this.title.value, todos: [] };
+    if (
+      !_Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProjects().filter(
+        (project) => project.title === newProject.title
+      ).length
+    ) {
+      addProject(newProject);
+      this.reset();
+    } else {
+      this.title.setCustomValidity(
+        "There can't be 2 projects with the same name."
+      );
+    }
+  };
+
+  todoForm.onsubmit = function (ev) {
+    ev.preventDefault();
+    const newTodo = {
+      id: (0,uuid__WEBPACK_IMPORTED_MODULE_2__["default"])(),
+      title: this.title.value,
+      dueDate: this.dueDate.value,
+      notes: this.notes.value,
+      parentProject: _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getCurrentProject(),
+      status: false,
+    };
+    addTodo(newTodo);
+    this.reset();
+    this.style.display = 'none';
+  };
+
+  addTodoBtn.onclick = () => {
+    todoForm.style.display =
+      todoForm.style.display === 'flex' ? 'none' : 'flex';
+
+    if (todoForm.style.display === 'flex') todoForm.title.focus();
+  };
+
+  allTodosBtn.onclick = function () {
     const todos = _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getAllTodos();
     _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].onProjectClick('allTodos', '', todos);
+    todos.forEach((todo) => addTodoEvent(todo));
+  };
+
+  const addProject = (newProject) => {
+    _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].addProject(newProject);
+    _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].renderProject(newProject, _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProjects().length);
+    addLinkEvent(newProject);
+  };
+
+  const addTodo = (newTodo) => {
+    _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProjects((project) => project);
+    _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].addTodo(newTodo);
+    _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].renderTodos(_Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProject().getTodos());
+    _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProject()
+      .getTodos()
+      .forEach((todo) => addTodoEvent(todo));
   };
 
   const addLinkEvent = (project) => {
-    document.querySelector(`[data-id="${project.id}"]`).onclick = function () {
+    const li = document.querySelector(`[data-id="${project.id}"]`);
+
+    li.children[0].onclick = () => {
       const todos = _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProject(project.id)?.getTodos() ?? [];
       _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].onProjectClick(project.id, project.title, todos);
       _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].setCurrentProject(project.id);
       todos.forEach((todo) => addTodoEvent(todo));
     };
+
+    li.children[1].onclick = () => {
+      let confirmation = window.confirm(
+        `Are you sure you want to delete this project? (${project.title})`
+      );
+      if (!confirmation) return;
+
+      _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].removeProject(project.id);
+      _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].removeProject(project.id);
+
+      if (
+        document.querySelector('#projectTitle').textContent.slice(1) ===
+        project.title
+      )
+        _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].onProjectClick('allTodos', '', _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getAllTodos());
+    };
   };
 
   const addTodoEvent = (todo) => {
-    const todoElement = document.querySelector(`[data-id="${todo.id}"]`);
-    // todoElement.onclick = function(){
-
-    // }
+    const todoElement = document.querySelector(`[data-id="${todo.id}"]`)
+      .children[1];
 
     todoElement.children[2].onclick = () => {
       let parentId = todo.parentProject;
@@ -728,8 +806,12 @@ const EventController = (() => {
       _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getProject(todo.parentProject)
         .getTodos()
         .filter((t) => t.id === todo.id)[0].status = todo.getStatus();
-      todoElement.classList.toggle('checked');
+      todoElement.parentElement.classList.toggle('checked');
       _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].saveProjects();
+    };
+
+    todoElement.children[4].onclick = () => {
+      _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].onTodoExtend(todo.id);
     };
   };
 
@@ -797,6 +879,10 @@ const Storage = (() => {
     );
     saveProjects();
   };
+  const removeProject = (projectId) => {
+    projects = projects.filter((project) => project.id !== projectId);
+    saveProjects();
+  };
   const getProjects = () => projects;
 
   const addTodo = (newTodo) => {
@@ -821,6 +907,7 @@ const Storage = (() => {
     saveProjects,
     getProjects,
     addProject,
+    removeProject,
     addTodo,
     removeTodo,
     getAllTodos,
@@ -865,10 +952,16 @@ const UIController = (() => {
   const renderProject = (project, projectsNum) => {
     if (projectsNum < 2) projectDisplay.textContent = '';
     let li = document.createElement('li');
-    li.textContent = project.title;
     li.setAttribute('data-id', project.id);
-
+    li.innerHTML = `
+      <span>${project.title}</span>
+      <button>X</button>
+    `;
     projectDisplay.append(li);
+  };
+
+  const removeProject = (projectId) => {
+    document.querySelector(`[data-id="${projectId}"]`).remove();
   };
 
   const renderProjectList = (projects) => {
@@ -890,10 +983,16 @@ const UIController = (() => {
       todoDisplay.innerHTML += `<div class="todo${
         todo.getStatus() ? ' checked' : ''
       }" data-id="${todo.id}">
-        <p class="title">${todo.title}</p>
-        <p class="dueDate">Due: ${todo.dueDate}</p>
-        <button class="delete">X</button>
-        <button class="check">&check;</button>
+        <p class="notes">${
+          todo.notes.length ? todo.notes : 'The are no notes for this todo.'
+        }</p>
+        <div class="todo-header">
+          <p class="title">${todo.title}</p>
+          <p class="dueDate">Due: ${todo.dueDate}</p>
+          <button class="delete">X</button>
+          <button class="check">&check;</button>
+          <button class="extend">&#x226B;</button>
+        </div>
         </div>`;
     });
   };
@@ -904,17 +1003,30 @@ const UIController = (() => {
       todoDisplay.textContent = "This project doesn't have any todos";
   };
 
+  const onTodoExtend = (todoId) => {
+    let lastExtended = document.querySelector('.extended');
+    lastExtended?.classList.toggle('extended');
+    if (lastExtended?.getAttribute('data-id') !== todoId)
+      document
+        .querySelector(`[data-id="${todoId}"]`)
+        .classList.toggle('extended');
+  };
+
   const onProjectClick = (projectId, projectTitle, todos) => {
+    console.log({ projectId, projectTitle, todos });
     displayProjectTitle(projectTitle);
     highlightElement(projectId);
     renderTodos(todos);
     if (projectTitle) addTodoBtn.style.display = 'block';
     else addTodoBtn.style.display = 'none';
+    document.querySelector('#newTodo').style.display = 'none';
   };
 
   return {
     onProjectClick,
+    onTodoExtend,
     renderProject,
+    removeProject,
     renderProjectList,
     renderTodos,
     removeTodo,
@@ -1068,7 +1180,6 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/dist/esm-browser/v4.js");
 /* harmony import */ var _modules_UIController__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/UIController */ "./src/modules/UIController.js");
 /* harmony import */ var _modules_EventController__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/EventController */ "./src/modules/EventController.js");
 /* harmony import */ var _modules_Storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Storage */ "./src/modules/Storage.js");
@@ -1077,64 +1188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const app = (() => {
-  const projectForm = document.querySelector('#newProject'),
-    todoForm = document.querySelector('#newTodo'),
-    addTodoBtn = document.querySelector('#addTodo');
-
-  projectForm.onsubmit = function (ev) {
-    ev.preventDefault();
-    const newProject = { id: (0,uuid__WEBPACK_IMPORTED_MODULE_4__["default"])(), title: this.title.value, todos: [] };
-    if (
-      !_modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getProjects().filter(
-        (project) => project.title === newProject.title
-      ).length
-    ) {
-      addProject(newProject);
-      this.reset();
-    } else {
-      this.title.setCustomValidity(
-        "There can't be 2 projects with the same name."
-      );
-    }
-  };
-
-  todoForm.onsubmit = function (ev) {
-    ev.preventDefault();
-    const newTodo = {
-      id: (0,uuid__WEBPACK_IMPORTED_MODULE_4__["default"])(),
-      title: this.title.value,
-      dueDate: this.dueDate.value,
-      notes: this.notes.value,
-      parentProject: _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getCurrentProject(),
-      status: false,
-    };
-    addTodo(newTodo);
-    this.reset();
-    this.style.display = 'none';
-  };
-
-  addTodoBtn.onclick = () => {
-    todoForm.style.display =
-      todoForm.style.display === 'flex' ? 'none' : 'flex';
-
-    if (todoForm.style.display === 'flex') todoForm.title.focus();
-  };
-
-  const addProject = (newProject) => {
-    _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].addProject(newProject);
-    _modules_UIController__WEBPACK_IMPORTED_MODULE_1__["default"].renderProject(newProject, _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getProjects().length);
-    _modules_EventController__WEBPACK_IMPORTED_MODULE_2__["default"].addLinkEvent(newProject);
-  };
-
-  const addTodo = (newTodo) => {
-    _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getProjects((project) => project);
-    _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].addTodo(newTodo);
-    _modules_UIController__WEBPACK_IMPORTED_MODULE_1__["default"].renderTodos(_modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getProject().getTodos());
-    _modules_EventController__WEBPACK_IMPORTED_MODULE_2__["default"].addTodoEvent(newTodo);
-  };
-
   const setup = (() => {
     const allTodos = _modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getAllTodos();
     _modules_UIController__WEBPACK_IMPORTED_MODULE_1__["default"].renderProjectList(_modules_Storage__WEBPACK_IMPORTED_MODULE_3__["default"].getProjects());
@@ -1150,4 +1204,4 @@ const app = (() => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.cb8919718132dd471755.js.map
+//# sourceMappingURL=bundle.990fc62e35e603fe6f33.js.map

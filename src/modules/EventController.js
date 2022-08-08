@@ -69,11 +69,26 @@ const EventController = (() => {
   };
 
   const addLinkEvent = (project) => {
-    document.querySelector(`[data-id="${project.id}"]`).onclick = function () {
+    const li = document.querySelector(`[data-id="${project.id}"]`);
+
+    li.children[0].onclick = () => {
       const todos = Storage.getProject(project.id)?.getTodos() ?? [];
       UIController.onProjectClick(project.id, project.title, todos);
       Storage.setCurrentProject(project.id);
       todos.forEach((todo) => addTodoEvent(todo));
+    };
+
+    li.children[1].onclick = () => {
+      let confirmation = window.confirm(
+        `Are you sure you want to delete this project? (${project.title})`
+      );
+      if (!confirmation) return;
+
+      UIController.removeProject(project.id);
+      Storage.removeProject(project.id);
+      if (Storage.getCurrentProject() === project.id) {
+        UIController.onProjectClick('allTodos', '', Storage.getAllTodos());
+      }
     };
   };
 

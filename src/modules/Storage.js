@@ -42,6 +42,10 @@ const Storage = (() => {
     );
     saveProjects();
   };
+  const removeProject = (projectId) => {
+    projects = projects.filter((project) => project.id !== projectId);
+    saveProjects();
+  };
   const getProjects = () => projects;
 
   const addTodo = (newTodo) => {
@@ -66,6 +70,7 @@ const Storage = (() => {
     saveProjects,
     getProjects,
     addProject,
+    removeProject,
     addTodo,
     removeTodo,
     getAllTodos,
