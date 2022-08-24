@@ -782,12 +782,9 @@ const EventController = (() => {
 
       _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].removeProject(project.id);
       _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].removeProject(project.id);
-
-      if (
-        document.querySelector('#projectTitle').textContent.slice(1) ===
-        project.title
-      )
+      if (_Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getCurrentProject() === project.id) {
         _UIController__WEBPACK_IMPORTED_MODULE_0__["default"].onProjectClick('allTodos', '', _Storage__WEBPACK_IMPORTED_MODULE_1__["default"].getAllTodos());
+      }
     };
   };
 
@@ -1013,7 +1010,6 @@ const UIController = (() => {
   };
 
   const onProjectClick = (projectId, projectTitle, todos) => {
-    console.log({ projectId, projectTitle, todos });
     displayProjectTitle(projectTitle);
     highlightElement(projectId);
     renderTodos(todos);
@@ -1204,4 +1200,4 @@ const app = (() => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.990fc62e35e603fe6f33.js.map
+//# sourceMappingURL=bundle.d6e4c2fcb390b677ac4e.js.map
