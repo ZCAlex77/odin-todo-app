@@ -2,7 +2,7 @@
 
 ### Description
 
-A todo app that lets you add todos and organise them into projects. I made this app following a lesson on theodinproject.com to practice using webpack.
+A todo app that lets you add todos and organise them into projects. I made this app following this [lesson](https://www.theodinproject.com/lessons/node-path-javascript-todo-list) on theodinproject.com to practice using webpack.
 
 ### Preview
 
