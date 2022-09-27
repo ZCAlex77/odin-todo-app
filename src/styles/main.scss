@@ -1,13 +1,21 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
+$gray-1000: #1f1f1f;
+$gray-900: #222;
+$gray-200: #ddd;
+$gray-100: #fefefe;
+$green-btn-col: #5cd85c;
+$red-btn-col: #e93a3a;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
 }
 
 html {
-  color: inherit;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -17,138 +25,158 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: $gray-900;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ddd;
+  background: $gray-200;
 }
 
 body {
-  background: #333;
+  background: $gray-1000;
   display: grid;
-  grid-template: 4rem 32px 1fr 32px / 32px 25% 32px 1fr 32px;
+  grid-template: auto 1fr / 30% 1fr;
   height: 100vh;
 }
 
-button {
+button,
+input[type='submit'],
+nav ul li,
+#allTodos {
   cursor: pointer;
 }
 
+header,
+nav,
+.todo,
+.notes {
+  color: $gray-900;
+}
+
+#newTodo,
+nav,
+.todo-header,
+.todo button {
+  background-color: $gray-100;
+}
+
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: $gray-200;
   padding: 16px 32px;
-  grid-area: 1 / 1 / 1 / 6;
+  grid-area: 1 / 1 / 1 / 2;
 
   h1 {
     font-size: 2rem;
+    text-align: center;
   }
 }
 
 nav {
-  background-color: #eee;
-  color: #222;
-  padding: 16px;
-  grid-area: 3 / 2 / 3 / 2;
-  border-radius: 10px;
-  overflow-y: scroll;
+  padding: 20px;
+  grid-area: 2 / 1 / 2 / 2;
+  overflow-y: auto;
 
-  h2,
-  hr,
   form {
-    margin-bottom: 10px;
+    margin: 7px 0;
   }
 
-  ul {
-    list-style: none;
-
-    li {
-      font-size: 20px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      position: relative;
-      display: flex;
-
-      &.active span {
-        background-color: #222;
-        color: #eee;
-      }
-
-      span {
-        padding: 5px 15px;
-        border: 1px solid #222;
-        display: block;
-        border-radius: 999px 0 0 999px;
-        background-color: #bbb;
-        color: #111;
-        white-space: nowrap;
-        width: calc(100% - 34px);
-
-        &:hover {
-          background-color: #222;
-          color: #eee;
-        }
-      }
-
-      button {
-        border-radius: 0 999px 999px 0;
-        border: 1px solid #222;
-        background: #e93a3a;
-        height: 36px;
-        width: 36px;
-      }
-    }
+  button {
+    border: 1px solid $gray-900;
+    height: 36px;
+    width: 36px;
   }
 
   form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid $gray-900;
+    border-top: 1px solid $gray-900;
+    padding: 7px 0;
+
+    ::placeholder {
+      color: $gray-900;
+    }
+
+    input {
+      background: inherit;
+      padding: 5px;
+      font-size: 1.1rem;
+    }
 
     button {
-      width: 32px;
-      height: 32px;
-      background: #5cd85c;
-      border: 0;
-      color: #fff;
+      background: $green-btn-col;
+      color: $gray-100;
       font-weight: bold;
-      border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 
-  ::placeholder {
-    color: #222;
+  form input,
+  ul li span {
+    width: calc(100% - 34px);
+    border: 1px solid $gray-900;
+    padding: 5px 15px;
+    font-size: 20px;
   }
 
-  input {
-    background: #ddd;
-    color: #111;
-    padding: 5px;
-    flex: 80%;
-    font-size: 1.1rem;
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 5px;
+      display: flex;
+
+      &.active span {
+        background-color: $gray-900;
+        color: $gray-100;
+      }
+
+      span {
+        white-space: nowrap;
+
+        &:hover {
+          background-color: $gray-900;
+          color: $gray-100;
+        }
+      }
+
+      button {
+        background: $red-btn-col;
+      }
+
+      button:hover {
+        color: $gray-100;
+      }
+    }
   }
 }
 
 main {
-  grid-area: 3 / 4 / 3 / 4;
-  color: #fff;
+  grid-area: 1 / 2 / 3 / 2;
+  color: $gray-100;
   position: relative;
+  padding: 32px;
+
+  .main-header {
+    position: relative;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
 
   #allTodos {
     padding: 5px 10px;
     border: 2px solid #fff;
     border-radius: 10px;
-    cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
 
     &:hover,
     &.active {
       background-color: #fff;
-      color: #333;
+      color: $gray-1000;
     }
   }
 
@@ -163,7 +191,7 @@ main {
     width: 100%;
     height: 86%;
     gap: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .todo {
@@ -177,30 +205,29 @@ main {
     }
 
     .todo-header {
-      background: #eee;
-      color: #222;
       padding: 5px 10px 5px 15px;
-      border-radius: 999px;
       height: 40px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
       position: absolute;
+      display: grid;
+      grid-template-columns: 1fr max-content repeat(2, 3ch) 6ch;
+      gap: 5px;
     }
 
-    .title {
-      flex: 70%;
+    .todo-header > * {
+      align-self: center;
+    }
+
+    .dueDate {
+      padding: 0 10px;
     }
 
     .notes {
       height: 0px;
       transition: height 1s;
       overflow-y: hidden;
-      background-color: #666;
-      color: #eee;
+      background-color: #bbb;
       z-index: -1;
       position: relative;
-      border-radius: 30px 30px 20px 20px;
     }
 
     &.checked .title {
@@ -208,62 +235,65 @@ main {
     }
 
     &.checked .check {
-      background: #5cd85c;
+      background: $green-btn-col;
     }
 
     &.extended {
       .todo-header {
         top: 0;
-        border-radius: 20px 20px 0 0;
       }
       .notes {
         height: auto;
-        padding: 45px 20px 10px 20px;
+        padding: 50px 20px 10px 20px;
       }
       .extend {
-        background-color: #666;
-        color: #eee;
+        background-color: #222;
+        color: $gray-100;
       }
     }
 
     button {
-      border-radius: 50%;
       aspect-ratio: 1 / 1;
+      justify-self: center;
       height: 100%;
-      border: 1px solid #666;
-      background: transparent;
-      color: #222;
+      color: $gray-900;
       font-weight: bold;
+      box-shadow: 2px 2px 4px $gray-900;
+      border: 1px solid $gray-900;
     }
 
     .delete:hover {
-      background: #f00;
+      background: $red-btn-col;
+    }
+
+    .check:hover {
+      background: $green-btn-col;
     }
 
     .extend {
-      transform: rotate(0.25turn);
       font-weight: bold;
+      aspect-ratio: unset;
+      padding: 0 5px;
 
       &:hover {
-        background: #666;
-        color: #eee;
+        background: $gray-900;
+        color: $gray-100;
       }
     }
   }
 }
 
 #addTodo {
-  padding: 0.5rem;
-  background: #5cd85c;
-  color: #222;
+  padding: 0 0.5rem;
+  background: $green-btn-col;
   border: 0;
-  border-radius: 0 10px 0 10px;
   position: absolute;
   top: 0;
   right: 0;
   font-weight: bold;
   display: none;
   z-index: 11;
+  height: 100%;
 
   &:hover {
     color: #fff;
@@ -271,20 +301,17 @@ main {
 }
 
 #newTodo {
-  background-color: #eeea;
-  backdrop-filter: blur(2px);
-  color: #222;
+  color: $gray-900;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2px;
+  right: -2px;
   width: 300px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 32px;
   display: none;
+  flex-direction: column;
+  align-items: center;
   z-index: 10;
+  border: 2px solid $gray-900;
 
   label {
     text-align: center;
@@ -296,6 +323,7 @@ main {
   textarea {
     margin-bottom: 1rem;
     font-size: 0.9rem;
+    width: 100%;
   }
 
   input {
@@ -305,12 +333,14 @@ main {
 
   textarea {
     padding: 10px;
+    resize: none;
+    flex-basis: 0;
   }
 
   button {
-    border-radius: 10px;
     border: 0;
-    background: #5cd85c;
-    padding: 5px;
+    background: $green-btn-col;
+    padding: 5px 10px;
+    font-size: 1.2rem;
   }
 }

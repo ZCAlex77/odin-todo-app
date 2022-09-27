@@ -58,7 +58,7 @@ const UIController = (() => {
           <p class="dueDate">Due: ${todo.dueDate}</p>
           <button class="delete">X</button>
           <button class="check">&check;</button>
-          <button class="extend">&#x226B;</button>
+          <button class="extend">Notes</button>
         </div>
         </div>`;
     });
