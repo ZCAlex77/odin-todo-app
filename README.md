@@ -18,6 +18,12 @@ A todo app that lets you add todos and organise them into projects. I made this 
 - expand todo to see saved notes for it from the last button on the todo
 
 ### Things I learned from this
+
 - how to use webpack to bundle files
 - how to create factory functions and modules
 - how to split my code into different modules/factories for each purpose of the app
+
+### Future plans for this project
+
+- add a filter/sort system
+- improve UI
