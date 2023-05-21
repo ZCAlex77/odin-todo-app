@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
 $gray-1000: #1f1f1f;
-$gray-900: #222;
-$gray-200: #ddd;
 $gray-100: #fefefe;
-$green-btn-col: #5cd85c;
-$red-btn-col: #e93a3a;
+$gray-500: #555;
+$gray-900: #222;
+
+$red-100: #eb5050;
+$purple-100: #c550ff;
+$purple-300: #9845e6;
 
 * {
   margin: 0;
@@ -30,14 +32,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: $gray-200;
+  background: $gray-500;
 }
 
 body {
   background: $gray-1000;
   display: grid;
-  grid-template: auto 1fr / 30% 1fr;
+  grid-template: 12% 1fr / 30% 1fr;
   height: 100vh;
+  padding: 20px;
 }
 
 button,
@@ -62,9 +65,11 @@ nav,
 }
 
 header {
-  background-color: $gray-200;
-  padding: 16px 32px;
+  background-color: $gray-100;
+  display: grid;
+  place-items: center;
   grid-area: 1 / 1 / 1 / 2;
+  border-radius: 10px 10px 0 0;
 
   h1 {
     font-size: 2rem;
@@ -73,81 +78,93 @@ header {
 }
 
 nav {
+  background-color: $purple-300;
+  border-radius: 0 0 10px 10px;
   padding: 20px;
   grid-area: 2 / 1 / 2 / 2;
   overflow-y: auto;
 
-  form {
-    margin: 7px 0;
-  }
-
   button {
-    border: 1px solid $gray-900;
     height: 36px;
     width: 36px;
+    border: 0;
   }
 
   form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $gray-900;
-    border-top: 1px solid $gray-900;
-    padding: 7px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $gray-100;
+    margin-bottom: 10px;
 
     ::placeholder {
       color: $gray-900;
     }
 
+    input,
+    button {
+      height: calc(1.4rem + 10px);
+    }
+
     input {
-      background: inherit;
+      background: $gray-100;
       padding: 5px;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      border-radius: 10px 0 0 10px;
+      border: 0;
+      width: calc(100% - 1.4rem);
+
+      &:focus {
+        outline: none;
+      }
     }
 
     button {
-      background: $green-btn-col;
+      background: $purple-100;
       color: $gray-100;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      border-radius: 0 10px 10px 0;
+      width: calc(1.4rem + 10px);
     }
-  }
-
-  form input,
-  ul li span {
-    width: calc(100% - 34px);
-    border: 1px solid $gray-900;
-    padding: 5px 15px;
-    font-size: 20px;
   }
 
   ul {
     list-style: none;
 
     li {
-      margin-bottom: 5px;
+      background-color: $gray-100;
+      margin-bottom: 10px;
       display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
 
-      &.active span {
-        background-color: $gray-900;
-        color: $gray-100;
+      &.active,
+      &:hover {
+        background: linear-gradient(to right, $gray-100, $purple-100);
+      }
+
+      &:first-of-type {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 10px 10px;
       }
 
       span {
+        color: $gray-900;
+        padding: 5px;
+        flex-basis: 100%;
         white-space: nowrap;
-
-        &:hover {
-          background-color: $gray-900;
-          color: $gray-100;
-        }
       }
 
       button {
-        background: $red-btn-col;
-      }
-
-      button:hover {
+        background-color: $red-100;
         color: $gray-100;
+        font-weight: bold;
       }
     }
   }
@@ -235,7 +252,7 @@ main {
     }
 
     &.checked .check {
-      background: $green-btn-col;
+      background: $purple-100;
     }
 
     &.extended {
@@ -263,11 +280,11 @@ main {
     }
 
     .delete:hover {
-      background: $red-btn-col;
+      background: $red-100;
     }
 
     .check:hover {
-      background: $green-btn-col;
+      background: $purple-100;
     }
 
     .extend {
@@ -285,7 +302,7 @@ main {
 
 #addTodo {
   padding: 0 0.5rem;
-  background: $green-btn-col;
+  background: $purple-100;
   border: 0;
   position: absolute;
   top: 0;
@@ -339,7 +356,7 @@ main {
 
   button {
     border: 0;
-    background: $green-btn-col;
+    background: $purple-100;
     padding: 5px 10px;
     font-size: 1.2rem;
   }
