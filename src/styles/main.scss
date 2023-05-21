@@ -6,7 +6,7 @@ $gray-500: #555;
 $gray-900: #222;
 
 $red-100: #eb5050;
-$purple-100: #c550ff;
+$purple-100: #c180ff;
 $purple-300: #9845e6;
 
 * {
@@ -38,7 +38,8 @@ html {
 body {
   background: $gray-1000;
   display: grid;
-  grid-template: 12% 1fr / 30% 1fr;
+  grid-template-columns: 30% 1fr;
+  gap: 20px;
   height: 100vh;
   padding: 20px;
 }
@@ -46,7 +47,7 @@ body {
 button,
 input[type='submit'],
 nav ul li,
-#allTodos {
+#all-todos-btn {
   cursor: pointer;
 }
 
@@ -57,32 +58,43 @@ nav,
   color: $gray-900;
 }
 
-#newTodo,
+#new-todo-form,
 nav,
 .todo-header,
 .todo button {
   background-color: $gray-100;
 }
 
-header {
-  background-color: $gray-100;
-  display: grid;
-  place-items: center;
-  grid-area: 1 / 1 / 1 / 2;
-  border-radius: 10px 10px 0 0;
+.todo,
+#projects li {
+  &:first-of-type {
+    border-radius: 10px 10px 0 0;
+  }
 
-  h1 {
-    font-size: 2rem;
-    text-align: center;
+  &:last-of-type {
+    border-radius: 0 0 10px 10px;
+  }
+
+  &:last-of-type:first-of-type {
+    border-radius: 10px;
   }
 }
 
 nav {
   background-color: $purple-300;
-  border-radius: 0 0 10px 10px;
-  padding: 20px;
-  grid-area: 2 / 1 / 2 / 2;
+  border-radius: 10px;
   overflow-y: auto;
+  position: relative;
+
+  h1 {
+    background-color: $gray-100;
+    font-size: 2rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 12%;
+    margin-bottom: 10px;
+  }
 
   button {
     height: 36px;
@@ -90,12 +102,14 @@ nav {
     border: 0;
   }
 
+  form,
+  ul {
+    padding: 0 10px;
+  }
+
   form {
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid $gray-100;
-    margin-bottom: 10px;
 
     ::placeholder {
       color: $gray-900;
@@ -129,6 +143,11 @@ nav {
     }
   }
 
+  hr {
+    margin: 10px;
+    color: $gray-100;
+  }
+
   ul {
     list-style: none;
 
@@ -144,14 +163,6 @@ nav {
       &.active,
       &:hover {
         background: linear-gradient(to right, $gray-100, $purple-100);
-      }
-
-      &:first-of-type {
-        border-radius: 10px 10px 0 0;
-      }
-
-      &:last-of-type {
-        border-radius: 0 0 10px 10px;
       }
 
       span {
@@ -171,20 +182,29 @@ nav {
 }
 
 main {
-  grid-area: 1 / 2 / 3 / 2;
   color: $gray-100;
   position: relative;
-  padding: 32px;
 
   .main-header {
     position: relative;
+    height: 12%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid $gray-100;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 1.4rem;
+
+      span {
+        display: inline-block;
+      }
+    }
   }
 
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  #allTodos {
+  #all-todos-btn {
     padding: 5px 10px;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -197,11 +217,6 @@ main {
     }
   }
 
-  hr {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-
   #todos {
     display: flex;
     flex-direction: column;
@@ -212,9 +227,10 @@ main {
   }
 
   .todo {
-    width: calc(100% - 10px);
+    width: 100%;
     min-height: 40px;
     position: relative;
+    overflow: hidden;
 
     .todo-header,
     .notes {
@@ -234,13 +250,12 @@ main {
       align-self: center;
     }
 
-    .dueDate {
+    .due-date {
       padding: 0 10px;
     }
 
     .notes {
       height: 0px;
-      transition: height 1s;
       overflow-y: hidden;
       background-color: #bbb;
       z-index: -1;
@@ -259,10 +274,12 @@ main {
       .todo-header {
         top: 0;
       }
+
       .notes {
         height: auto;
         padding: 50px 20px 10px 20px;
       }
+
       .extend {
         background-color: #222;
         color: $gray-100;
@@ -275,16 +292,18 @@ main {
       height: 100%;
       color: $gray-900;
       font-weight: bold;
-      box-shadow: 2px 2px 4px $gray-900;
-      border: 1px solid $gray-900;
+      border-radius: 10px;
+      border: 2px solid $gray-900;
     }
 
     .delete:hover {
       background: $red-100;
+      color: $gray-100;
     }
 
     .check:hover {
       background: $purple-100;
+      color: $gray-100;
     }
 
     .extend {
@@ -293,45 +312,41 @@ main {
       padding: 0 5px;
 
       &:hover {
-        background: $gray-900;
+        background: $gray-1000;
         color: $gray-100;
       }
     }
   }
 }
 
-#addTodo {
-  padding: 0 0.5rem;
+#add-todo-btn {
   background: $purple-100;
+  border-radius: 0 10px 0 0;
+  font-size: 1.3rem;
+  padding: 5px 10px;
   border: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-weight: bold;
   display: none;
   z-index: 11;
-  height: 100%;
 
   &:hover {
     color: #fff;
   }
 }
 
-#newTodo {
+#new-todo-form {
   color: $gray-900;
   position: absolute;
-  top: -2px;
-  right: -2px;
+  top: 33%;
+  right: 0;
   width: 300px;
-  padding: 32px;
+  padding: 20px 10px 10px 10px;
   display: none;
   flex-direction: column;
-  align-items: center;
   z-index: 10;
   border: 2px solid $gray-900;
+  border-radius: 10px;
 
   label {
-    text-align: center;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
@@ -357,7 +372,9 @@ main {
   button {
     border: 0;
     background: $purple-100;
+    color: $gray-100;
     padding: 5px 10px;
     font-size: 1.2rem;
+    border-radius: 0 0 10px 10px;
   }
 }
