@@ -50,15 +50,15 @@ const UIController = (() => {
       todoDisplay.innerHTML += `<div class="todo${
         todo.getStatus() ? ' checked' : ''
       }" data-id="${todo.id}">
-        <p class="notes">${
-          todo.notes.length ? todo.notes : 'The are no notes for this todo.'
+        <p class="notes">Notes: ${
+          todo.notes.length ? todo.notes : 'No extra info.'
         }</p>
         <div class="todo-header">
           <p class="title">${todo.title}</p>
           <p class="due-date">Due: ${todo.dueDate}</p>
           <button class="delete">X</button>
           <button class="check">&check;</button>
-          <button class="extend">Notes</button>
+          <button class="extend">Extend</button>
         </div>
         </div>`;
     });
@@ -66,8 +66,7 @@ const UIController = (() => {
 
   const removeTodo = (id) => {
     document.querySelector(`[data-id="${id}"]`).remove();
-    if (!todoDisplay.textContent)
-      todoDisplay.textContent = "This project doesn't have any todos";
+    if (!todoDisplay.textContent) todoDisplay.textContent = 'No todos yet.';
   };
 
   const onTodoExtend = (todoId) => {
