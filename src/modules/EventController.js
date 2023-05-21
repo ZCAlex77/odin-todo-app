@@ -3,10 +3,10 @@ import UIController from './UIController';
 import Storage from './Storage';
 
 const EventController = (() => {
-  const projectForm = document.querySelector('#newProject'),
-    todoForm = document.querySelector('#newTodo'),
-    addTodoBtn = document.querySelector('#addTodo'),
-    allTodosBtn = document.querySelector('#allTodos');
+  const projectForm = document.querySelector('#new-project-form'),
+    todoForm = document.querySelector('#new-todo-form'),
+    addTodoBtn = document.querySelector('#add-todo-btn'),
+    allTodosBtn = document.querySelector('#all-todos-btn');
 
   projectForm.onsubmit = function (ev) {
     ev.preventDefault();
@@ -49,7 +49,7 @@ const EventController = (() => {
 
   allTodosBtn.onclick = function () {
     const todos = Storage.getAllTodos();
-    UIController.onProjectClick('allTodos', '', todos);
+    UIController.onProjectClick('all-todos-btn', '', todos);
     todos.forEach((todo) => addTodoEvent(todo));
   };
 
@@ -87,7 +87,7 @@ const EventController = (() => {
       UIController.removeProject(project.id);
       Storage.removeProject(project.id);
       if (Storage.getCurrentProject() === project.id) {
-        UIController.onProjectClick('allTodos', '', Storage.getAllTodos());
+        UIController.onProjectClick('all-todos-btn', '', Storage.getAllTodos());
       }
     };
   };

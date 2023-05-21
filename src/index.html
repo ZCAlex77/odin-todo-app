@@ -9,34 +9,32 @@
 </head>
 
 <body>
-  <header>
-    <h1>Projects</h1>
-  </header>
   <nav>
-    <form id="newProject">
+    <h1>Projects</h1>
+    <form id="new-project-form">
       <input type="text" name="title" minlength="1" placeholder="Create new project..." required>
       <button type="submit">+</button>
     </form>
+    <hr>
     <ul id="projects"></ul>
   </nav>
   <main>
     <div class="main-header">
       <h1>
-        <span id="allTodos" class="active" data-id="allTodos">Todos</span>
-        <span id="projectTitle"></span>
+        <span id="all-todos-btn" class="active" data-id="all-todos-btn">Todos</span>
+        <span id="project-title"></span>
       </h1>
-      <button id="addTodo">New todo</button>
-      <form id="newTodo">
+      <button id="add-todo-btn">New todo</button>
+      <form id="new-todo-form">
         <label for="title">Title</label>
         <input type="text" name="title" id="title" required>
         <label for="dueDate">Due date</label>
-        <input type="date" name="dueDate" id="dueDate" required>
+        <input type="date" name="dueDate" id="due-date" required>
         <label for="notes">Notes</label>
         <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
         <button type="submit">Add todo</button>
       </form>
     </div>
-    <hr>
     <div id="todos">
     </div>
   </main>

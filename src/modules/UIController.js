@@ -1,10 +1,10 @@
 const UIController = (() => {
   const projectDisplay = document.querySelector('#projects');
   const todoDisplay = document.querySelector('#todos');
-  const addTodoBtn = document.querySelector('#addTodo');
+  const addTodoBtn = document.querySelector('#add-todo-btn');
 
   const displayProjectTitle = (title) => {
-    document.querySelector('#projectTitle').textContent = title
+    document.querySelector('#project-title').textContent = title
       ? `> ${title}`
       : '';
   };
@@ -42,7 +42,7 @@ const UIController = (() => {
 
   const renderTodos = (todos) => {
     if (!todos.length) {
-      todoDisplay.textContent = "This project doesn't have any todos";
+      todoDisplay.textContent = 'No todos yet.';
       return;
     }
     todoDisplay.innerHTML = '';
@@ -55,7 +55,7 @@ const UIController = (() => {
         }</p>
         <div class="todo-header">
           <p class="title">${todo.title}</p>
-          <p class="dueDate">Due: ${todo.dueDate}</p>
+          <p class="due-date">Due: ${todo.dueDate}</p>
           <button class="delete">X</button>
           <button class="check">&check;</button>
           <button class="extend">Notes</button>
@@ -85,7 +85,7 @@ const UIController = (() => {
     renderTodos(todos);
     if (projectTitle) addTodoBtn.style.display = 'block';
     else addTodoBtn.style.display = 'none';
-    document.querySelector('#newTodo').style.display = 'none';
+    document.querySelector('#new-todo-form').style.display = 'none';
   };
 
   return {
